@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tariq Aziz | Regional Director INI & Associate Professor</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --emerald-deep: #0a3622;
+            --emerald-light: #1b4d3e;
+            --prestige-gold: #d4af37;
+            --marble-white: #f8f9fa;
+            --text-main: #212529;
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--text-main); line-height: 1.8; background-color: var(--marble-white); overflow-x: hidden; }
+
+        /* Typography */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .accent-font { font-family: 'Cinzel', serif; letter-spacing: 2px; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 15px 5%;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px);
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; border-bottom: 2px solid var(--prestige-gold);
+        }
+        .nav-logo-group { display: flex; align-items: center; gap: 20px; }
+        .nav-logo-group img { height: 50px; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { 
+            text-decoration: none; color: var(--emerald-deep); font-weight: 700; 
+            font-size: 0.85rem; text-transform: uppercase; transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--prestige-gold); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(rgba(10, 54, 34, 0.7), rgba(10, 54, 34, 0.7)), url('1000071938.jpg') no-repeat center center/cover;
+            color: white; text-align: center; padding: 0 10%;
+        }
+        .hero-box { border: 1px solid rgba(212, 175, 55, 0.3); padding: 60px; background: rgba(0,0,0,0.2); backdrop-filter: blur(5px); }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 10px; color: var(--prestige-gold); }
+        .hero h3 { font-size: 1.5rem; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; }
+
+        /* Project Section: South Asia Nitrogen Hub */
+        .sanh-section { 
+            background: var(--emerald-deep); color: white; padding: 100px 10%; 
+            position: relative; overflow: hidden;
+        }
+        .sanh-card {
+            background: rgba(255,255,255,0.05); border: 1px solid var(--prestige-gold);
+            padding: 40px; border-radius: 5px; margin-top: 40px;
+        }
+        .sanh-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 30px; }
+        .stat-item { text-align: center; border-right: 1px solid rgba(212, 175, 55, 0.3); }
+        .stat-item:last-child { border-right: none; }
+        .stat-item h4 { color: var(--prestige-gold); font-size: 2rem; }
+
+        /* Section Styling */
+        .section { padding: 120px 10%; }
+        .section-title { font-size: 3rem; margin-bottom: 60px; text-align: center; color: var(--emerald-deep); }
+        .section-title span { color: var(--prestige-gold); }
+
+        /* Tables & Lists */
+        .premium-table-wrapper { 
+            background: white; border-radius: 2px; box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            overflow: hidden; border-top: 5px solid var(--emerald-deep);
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #f1f1f1; padding: 25px; text-align: left; font-family: 'Cinzel'; color: var(--emerald-deep); }
+        td { padding: 20px 25px; border-bottom: 1px solid #eee; }
+
+        /* Interactive Articles */
+        .article-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .article-card {
+            background: white; padding: 40px; text-decoration: none; color: inherit;
+            border: 1px solid #eee; transition: var(--transition); position: relative;
+        }
+        .article-card:hover { border-color: var(--prestige-gold); transform: translateY(-10px); }
+        .article-card i { color: var(--prestige-gold); font-size: 1.5rem; margin-bottom: 20px; }
+        .article-card h4 { font-size: 1.3rem; margin-bottom: 15px; color: var(--emerald-deep); }
+
+        /* Publication Scroller */
+        .pub-scroll {
+            height: 500px; overflow-y: auto; padding: 40px;
+            background: #fff; border: 1px solid #eee;
+        }
+        .pub-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #f1f1f1; }
+
+        /* Buttons */
+        .btn-prestige {
+            background: var(--prestige-gold); color: var(--emerald-deep);
+            padding: 18px 40px; text-decoration: none; font-weight: 700;
+            display: inline-block; text-transform: uppercase; letter-spacing: 2px;
+            transition: var(--transition); border: 2px solid var(--prestige-gold);
+        }
+        .btn-prestige:hover { background: transparent; color: var(--prestige-gold); }
+
+        .footer { background: #111; color: white; padding: 100px 10% 40px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; }
+        .footer h3 { color: var(--prestige-gold); margin-bottom: 30px; font-family: 'Cinzel'; }
+        .social-links a { color: white; text-decoration: none; display: block; margin-bottom: 15px; transition: 0.3s; }
+        .social-links a:hover { color: var(--prestige-gold); padding-left: 10px; }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--marble-white); }
+        ::-webkit-scrollbar-thumb { background: var(--emerald-deep); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo-group">
+            <img src="1000071940.png" alt="UAF Logo">
+            <img src="1000071939.png" alt="INI Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#intro">Director Profile</a></li>
+            <li><a href="#sanh">Nitrogen Hub</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#publications">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="intro" class="hero">
+        <div class="hero-box" data-aos="fade-up">
+            <h3 class="accent-font">Welcome</h3>
+            <h1>Dr. Tariq Aziz</h1>
+            <h3>Regional Director | Associate Professor</h3>
+            <p style="margin-top: 30px; font-style: italic;">"Leading Sustainable Nitrogen Management for Global Food Security and Climate Action."</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;" data-aos="fade-up">
+            <h2 class="section-title">Academic <span>Overview</span></h2>
+            <p style="font-size: 1.1rem; color: #555;">
+                Dr. Aziz serves as the <strong>Regional Director for South Asia</strong> at the International Nitrogen Initiative (INI) and holds the position of <strong>Associate Professor of Soil Science</strong> at the University of Agriculture, Faisalabad (UAF), Pakistan. He is the lead partner from Pakistan in the global project <strong>"South Asia Nitrogen Hub"</strong> and is actively involved in the UNEP/GEF funded project <strong>“International Nitrogen Management Systems (INMS)”</strong>.
+            </p>
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 50px;">
+                <div><h4 style="color:var(--emerald-deep); font-size: 2rem;">120+</h4><p>Articles</p></div>
+                <div><h4 style="color:var(--emerald-deep); font-size: 2rem;">48+</h4><p>M.Sc Produced</p></div>
+                <div><h4 style="color:var(--emerald-deep); font-size: 2rem;">05</h4><p>Ph.D Produced</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sanh" class="sanh-section">
+        <h2 class="section-title" style="color: white;">South Asia <span>Nitrogen Hub (SANH)</span></h2>
+        <div class="sanh-card" data-aos="zoom-in">
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                As the <strong>Principal Investigator (Pakistan Chapter)</strong>, Dr. Aziz leads the national research agenda for the South Asian Nitrogen Hub, a transformative global initiative funded by <strong>UKRI under GCRF, UK</strong>.
+            </p>
+            <div class="sanh-stats">
+                <div class="stat-item">
+                    <h4>£19.6M</h4>
+                    <p>Total Project Cost</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Rs. 100M</h4>
+                    <p>Pakistan Share</p>
+                </div>
+                <div class="stat-item">
+                    <h4>2019-2024</h4>
+                    <p>Project Tenure</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Global</h4>
+                    <p>Collaboration</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px; opacity: 0.8;">
+                The project focuses on building a "Nitrogen Policy Report" and scientific evidence for sustainable nitrogen management across South Asian landscapes, including the Indus Basin of Pakistan.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2 class="section-title">Professional <span>Timeline</span></h2>
+        <div class="premium-table-wrapper" data-aos="fade-up">
+            <table>
+                <thead>
+                    <tr><th>Position</th><th>Organization</th><th>Period</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Principal</strong></td><td>UAF Sub-Campus Depalpur, Okara</td><td>2016 - 2023</td></tr>
+                    <tr><td><strong>Project Director</strong></td><td>HEC Funded Project (Rs. 889 Million)</td><td>2021 - 2022</td></tr>
+                    <tr><td><strong>Associate Professor</strong></td><td>University of Agriculture, Faisalabad</td><td>2013 - Present</td></tr>
+                    <tr><td><strong>Adjunct Senior Lecturer</strong></td><td>University of Western Australia</td><td>2014 - Present</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="articles" class="section" style="background: #fdfdfd;">
+        <h2 class="section-title">Critical <span>Perspectives</span></h2>
+        <div class="article-container">
+            <a href="https://www.thefridaytimes.com/01-Jul-2025/pakistan-leads-global-call-to-tackle-hidden-nitrogen-pollution-crisis-at-unea-7" target="_blank" class="article-card" data-aos="fade-up">
+                <i class="fa fa-newspaper"></i>
+                <h4>Pakistan Leads Global Call</h4>
+                <p>Tackling the hidden nitrogen pollution crisis at UNEA-7. Exploring global leadership and climate ambition.</p>
+                <span style="color: var(--prestige-gold); font-weight: bold;">Read Article →</span>
+            </a>
+            <a href="https://www.thefridaytimes.com/26-May-2025/the-silent-threat-why-nitrous-oxide-is-the-overlooked-climate-and-health-crisis" target="_blank" class="article-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa fa-radiation"></i>
+                <h4>The Silent Threat</h4>
+                <p>An investigation into why Nitrous Oxide is the most overlooked climate and health crisis of our decade.</p>
+                <span style="color: var(--prestige-gold); font-weight: bold;">Read Article →</span>
+            </a>
+            <a href="https://www.thefridaytimes.com/01-May-2025/smarter-fertiliser-use-a-key-to-food-security-climate-action-and-clean-environments" target="_blank" class="article-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa fa-leaf"></i>
+                <h4>Smarter Fertilizer Use</h4>
+                <p>Strategic insights into food security, clean environments, and the future of agricultural soil.</p>
+                <span style="color: var(--prestige-gold); font-weight: bold;">Read Article →</span>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+             <p><em>Links open in new tabs for uninterrupted browsing experience.</em></p>
+        </div>
+    </section>
+
+    <section id="publications" class="section">
+        <h2 class="section-title">Publications <span>& Books</span></h2>
+        <div class="pub-scroll" data-aos="fade-up">
+            <div class="pub-item">
+                <strong>[BOOK]</strong> Abbas, A., Aziz, T. (2024) <em>Pakistan Nitrogen Policy Report: Scientific Evidence, Current Initiatives and Policy Landscape.</em> South Asia Nitrogen Hub (SANH).
+            </div>
+            <div class="pub-item">
+                <strong>[JOURNAL]</strong> Wakeel , A., Aziz, T., et al. (2025) Managing Fertilizer Rates and Tillage Depth to Improve Nitrogen Use Efficiency. <em>Journal of Soil Science and Plant Nutrition.</em>
+            </div>
+            <div class="pub-item">
+                <strong>[BOOK]</strong> Tariq Aziz et al., (Eds) 2021. <em>Nitrogen Assessment; Pakistan as a case study.</em> Elsevier Academic Press, USA.
+            </div>
+            <div class="pub-item">
+                <strong>[JOURNAL]</strong> Rasheed, N., Aziz, T., et al. (2024) Zinc portioning and allocation patterns in lentil genotypes. <em>Frontiers Plant Sci.</em>
+            </div>
+            </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Official Address</h3>
+                <p>Institute of Soil & Environmental Sciences</p>
+                <p>University of Agriculture, Faisalabad, Pakistan</p>
+                <p style="margin-top: 20px;"><i class="fa fa-envelope"></i> draziz@uaf.edu.pk</p>
+            </div>
+            <div>
+                <h3>Professional Links</h3>
+                <div class="social-links">
+                    <a href="https://orcid.org/0000-0002-4300-3813" target="_blank">ORCID Digital Repository</a>
+                    <a href="https://www.linkedin.com/in/tariq-aziz-44b95024/" target="_blank">LinkedIn Professional Network</a>
+                    <a href="https://initrogen.org/content/tariq-aziz" target="_blank">International Nitrogen Initiative Profile</a>
+                    <a href="https://web.uaf.edu.pk/FacultyProfile/Profile/516" target="_blank">UAF Faculty Profile</a>
+                </div>
+            </div>
+            <div>
+                <h3>Curriculum Vitae</h3>
+                <p>View the comprehensive academic and professional record of Dr. Tariq Aziz.</p>
+                <a href="Dr Tariq CV  2025.docx_20260329_005941_0000.pdf" target="_blank" class="btn-prestige">Download Full CV</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 80px; border-top: 1px solid #333; padding-top: 30px; font-size: 0.8rem; opacity: 0.6;">
+            &copy; 2026 DR. TARIQ AZIZ. DESIGNED FOR ACADEMIC PRESTIGE.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+
+        // Smooth scroll for nav shortcuts
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
